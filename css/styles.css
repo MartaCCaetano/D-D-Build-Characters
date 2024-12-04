@@ -672,6 +672,7 @@ progress {
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
@@ -11008,16 +11009,10 @@ footer.footer .social-link:hover {
   }
 }
 .masthead {
-  min-height: 30rem;
+  min-height: 3%;
   position: relative;
   display: table;
   width: 100%;
-  height: auto;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .masthead h1, .masthead .h1 {
   font-size: 4rem;
@@ -11112,14 +11107,6 @@ footer.footer .social-link:hover {
 /* Ajusta o fundo do header para cobrir a área */
 header.masthead {
   position: relative;
-  height: 100vh;
-  /* Define a altura do cabeçalho para ocupar a tela toda */
-
-  /* Insira o caminho da sua imagem de background */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 1;
 }
 
 /* Coloca os cards acima do fundo */
@@ -11131,10 +11118,18 @@ header.masthead {
       /* Para permitir que os cards se movam para a próxima linha */
       align-items: stretch;
       /* Para esticar todos os cards para a mesma altura */
-    
+    text-align: center;
 }  
 
+.backgroundCard{
+  background-color: darkblue;
+  border-style: dashed;
+  border-color: var(--bs-link-color);
+}
+
 .card {
+  align-content: flex-start;
+  margin-top: 12px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -11147,7 +11142,8 @@ header.masthead {
 
 /* Ajuste o espaço e o layout do texto no header */
 .masthead h1,
-.masthead h3 {
+.masthead h3,
+.masthead h2 {
   position: relative;
   z-index: 2;
   color: white;
